@@ -21,6 +21,7 @@ public class PlayerControllerBase : MonoBehaviour
     public PlayerStateBase CurrentState { get; private set; }
     public float MovementMultiplier { get; private set; } = 1f;
     public Vector2 CursorPosition { get; private set; }
+    public Vector2 CurrentVelocity { get; private set; }
 
     private void Awake()
     {
@@ -44,13 +45,19 @@ public class PlayerControllerBase : MonoBehaviour
             SetState<MoveItemPlayerState>();
         }
 
+        HandleCursorMovement();
+
+        playerHandTransform.position = CursorPosition;
+    }
+
+    private void HandleCursorMovement()
+    {
         Vector2 movementVector = Vector2.zero;
         movementVector.y = (Input.GetKey(key_Up) ? 1 : 0) - (Input.GetKey(key_Down) ? 1 : 0);
         movementVector.x = (Input.GetKey(key_Right) ? 1 : 0) - (Input.GetKey(key_Left) ? 1 : 0);
         Vector2 newPosition = movementVector * Time.deltaTime * movementSpeed * MovementMultiplier;
         CursorPosition = GameManager.instance.ClampVectorInPlayView(CursorPosition + newPosition);
-
-        playerHandTransform.position = CursorPosition;
+        CurrentVelocity = movementVector;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,7 +70,7 @@ public class PlayerControllerBase : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == CurrentlyHoveredObject)
+        if (collision.gameObject == CurrentlyHoveredObject.gameObject)
         {
             CurrentlyHoveredObject = null;
         }

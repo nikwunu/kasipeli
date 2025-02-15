@@ -6,8 +6,6 @@ public class MoveItemPlayerState : PlayerStateBase
 
     public override void OnEnter()
     {
-        Debug.Log("Enter");
-
         if (Controller.CurrentlyHoveredObject == null)
         {
             Controller.SetState<DefaultPlayerState>();
@@ -28,5 +26,10 @@ public class MoveItemPlayerState : PlayerStateBase
             Controller.CursorPosition, Time.deltaTime * 10);
         draggedObject.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
 
+        if (Input.GetKeyUp(Controller.key_Use))
+        {
+            draggedObject.GetComponent<Rigidbody2D>().linearVelocity = Controller.CurrentVelocity * 4;
+            Controller.SetState<DefaultPlayerState>();
+        }
     }
 }
