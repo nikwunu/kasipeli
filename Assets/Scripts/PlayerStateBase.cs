@@ -14,4 +14,17 @@ public abstract class PlayerStateBase : MonoBehaviour
     public abstract void OnEnter();
 
     public abstract void OnExit();
+
+    protected void ExitState()
+    {
+        ExitState<DefaultPlayerState>();
+    }
+
+    protected void ExitState<T>() where T : PlayerStateBase
+    {
+        if (Controller != null)
+        {
+            Controller.SetState<DefaultPlayerState>();
+        }
+    }
 }
