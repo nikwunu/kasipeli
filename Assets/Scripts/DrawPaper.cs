@@ -5,7 +5,8 @@ public class DrawPaper : MonoBehaviour
 {
 	[SerializeField] MeshRenderer lomakePohja;
 	[SerializeField] Transform drawStroke;
-	public bool PenActive = true;
+	public Vector3 PenPosition;
+	public bool PenActive = false;
 	bool penWasActive;
 	/* public bool PaperToBeCleared;
 	bool wasPaperCleared; */
@@ -24,6 +25,8 @@ public class DrawPaper : MonoBehaviour
 
 	void Update()
 	{
+		drawStroke.position = PenPosition;
+
 		if(PenActive != penWasActive)
 		{
 			drawStroke.gameObject.SetActive(PenActive);

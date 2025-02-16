@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrawPaper
       objectReference: {fileID: 0}
+    - target: {fileID: 7144606140585398946, guid: d05714ce6b469734e84bd9063053de19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8292809804354012537, guid: d05714ce6b469734e84bd9063053de19, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
