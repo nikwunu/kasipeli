@@ -13,15 +13,24 @@ public class MoveItemPlayerState : PlayerStateBase
         }
 
         draggedObject = Controller.CurrentlyHoveredObject;
+        draggedObject.IsThrown = false;
     }
 
     public override void OnExit()
     {
-
+        draggedObject.ThrowerPlayer = Controller;
+        draggedObject.IsThrown = true;
+        draggedObject = null;
     }
 
     public override void UpdateState()
     {
+        if (draggedObject == null)
+        {
+            Controller.SetState<DefaultPlayerState>();
+            return;
+        }
+
         draggedObject.transform.position = Vector3.Lerp(draggedObject.transform.position, 
             Controller.CursorPosition, Time.deltaTime * 10);
         draggedObject.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
