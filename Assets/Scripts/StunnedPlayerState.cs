@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class StunnedPlayerState : PlayerStateBase
 {
+    public ParticleSystem stunParticle;
+
     private Vector3 startPosition;
     private float stunTimer = 0;
 
@@ -16,6 +18,7 @@ public class StunnedPlayerState : PlayerStateBase
         Controller.MovementMultiplier = 0;
         Controller.CanInteract = false;
         stunTimer = 3;
+        stunParticle.Play();
     }
 
     public override void OnExit()

@@ -18,6 +18,10 @@ public class PhonePlayerState : PlayerStateBase
         {
             phoneScroll.transform.position = Vector3.Lerp(phoneScroll.transform.position,
                 phoneStartPosition, 10 * Time.deltaTime);
+
+            phoneScroll.transform.GetChild(0).transform.localPosition =
+                Vector3.Lerp(phoneScroll.transform.GetChild(0).transform.localPosition,
+                Vector3.zero, Time.deltaTime * 20);
         }
     }
 
@@ -40,6 +44,9 @@ public class PhonePlayerState : PlayerStateBase
         Vector2 fixedPosition = GameManager.instance.ClampVectorInPhoneView(Controller.CursorPosition);
         Controller.CursorPosition = Vector2.Lerp(Controller.CursorPosition, fixedPosition, Time.deltaTime * 10);
         phoneScroll.transform.position = Controller.CursorPosition;
+        phoneScroll.transform.GetChild(0).transform.localPosition =
+            Vector3.Lerp(phoneScroll.transform.GetChild(0).transform.localPosition,
+            -2f * Vector3.forward, Time.deltaTime * 20);
 
         if (Input.GetKeyDown(Controller.key_Down))
         {

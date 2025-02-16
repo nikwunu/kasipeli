@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public float pointLimit;
     public float leftPlayerPointMultiplier;
     public float rightPlayerPointMultiplier;
+    public ThrowableObject[] throwablePrefabs;
     public float LeftPlayerPoints {  get; private set; }
     public float RightPlayerPoints {  get; private set; }
 
@@ -54,5 +55,11 @@ public class GameManager : MonoBehaviour
     public void AddRightPlayerPoints(float amount)
     {
         RightPlayerPoints += amount * rightPlayerPointMultiplier;
+    }
+
+    public void SpawnNewObject()
+    {
+        ThrowableObject obj = Instantiate(throwablePrefabs[Random.Range(0, throwablePrefabs.Length)]
+            ,Vector3.up * 7 + Vector3.right * Random.Range(-1f, 1f), Quaternion.identity);
     }
 }
