@@ -38,6 +38,13 @@ public class PlayerControllerBase : MonoBehaviour
 
     private void Update()
     {
+        UpdatePlayer();
+    }
+
+    protected void UpdatePlayer()
+    {
+        HandleCursorMovement();
+
         if (CurrentState != null)
         {
             CurrentState.UpdateState();
@@ -48,7 +55,6 @@ public class PlayerControllerBase : MonoBehaviour
             SetState<MoveItemPlayerState>();
         }
 
-        HandleCursorMovement();
         playerIndicator.transform.position = Vector3.MoveTowards(transform.position, Camera.main.transform.position, 2);
 
         playerHandTransform.position = CursorPosition;

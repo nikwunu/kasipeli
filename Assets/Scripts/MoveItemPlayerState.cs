@@ -27,7 +27,7 @@ public class MoveItemPlayerState : PlayerStateBase
     {
         if (draggedObject == null)
         {
-            Controller.SetState<DefaultPlayerState>();
+            ExitState();
             return;
         }
 
@@ -37,8 +37,8 @@ public class MoveItemPlayerState : PlayerStateBase
 
         if (Input.GetKeyUp(Controller.key_Use))
         {
-            draggedObject.GetComponent<Rigidbody2D>().linearVelocity = Controller.CurrentVelocity * 4;
-            Controller.SetState<DefaultPlayerState>();
+            draggedObject.GetComponent<Rigidbody2D>().linearVelocity = Controller.CurrentVelocity * 10;
+            ExitState();
         }
     }
 }
