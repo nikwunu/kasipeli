@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music:
-    clip: {fileID: 8300000, guid: a02d45e8040b5d1498623031e85e15bb, type: 3}
+    clip: {fileID: 8300000, guid: e1958dca843fcdc448463f8ab31fce9d, type: 3}
     mixerGroup: {fileID: 1468588115202338304, guid: 0648aff6a08d3f0468df28399773aba6, type: 2}
     loop: 1
     playOnAwake: 0
