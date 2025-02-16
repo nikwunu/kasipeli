@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1008990129687631906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3022151786648287004}
+  - component: {fileID: 4596301038271951266}
+  - component: {fileID: 401562994266879891}
+  m_Layer: 0
+  m_Name: Cactus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3022151786648287004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008990129687631906}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.06622799, y: 0.67550296, z: -0.016214542, w: 0.73419803}
+  m_LocalPosition: {x: -0.031, y: -0.014, z: -0.481}
+  m_LocalScale: {x: 1.5737648, y: 1.5737648, z: 1.5737648}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2532145797458003325}
+  m_LocalEulerAnglesHint: {x: -4.321, y: -274.522, z: 353.477}
+--- !u!33 &4596301038271951266
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008990129687631906}
+  m_Mesh: {fileID: -4562530893379237289, guid: b421ac77aff617042a049b2a24b418ea, type: 3}
+--- !u!23 &401562994266879891
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008990129687631906}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1bc51d28392fc54408a1494dd2806c43, type: 2}
+  - {fileID: 2100000, guid: 6b6d5c0fd62c39f4bbb22427643e2364, type: 2}
+  - {fileID: 2100000, guid: 00d1fbf367002a444a6527c904352381, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &1819339602163830110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 513577000908421976, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237350067410802121, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      propertyPath: m_Name
+      value: ThrowableObject.Cactus Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3022151786648287004}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+--- !u!4 &2532145797458003325 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4187338942808131619, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
+  m_PrefabInstance: {fileID: 1819339602163830110}
+  m_PrefabAsset: {fileID: 0}
