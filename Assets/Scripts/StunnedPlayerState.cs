@@ -17,7 +17,7 @@ public class StunnedPlayerState : PlayerStateBase
     {
         Controller.MovementMultiplier = 0;
         Controller.CanInteract = false;
-        stunTimer = 3;
+        stunTimer = 5;
         stunParticle.Play();
     }
 

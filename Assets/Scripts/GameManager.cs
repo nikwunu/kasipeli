@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +13,11 @@ public class GameManager : MonoBehaviour
     public float leftPlayerPointMultiplier;
     public float rightPlayerPointMultiplier;
     public ThrowableObject[] throwablePrefabs;
-    public float LeftPlayerPoints {  get; private set; }
+    public GameObject winEffectLeft;
+    public GameObject winEffectRight;
+
+    private bool ended = false;
+    public float LeftPlayerPoints { get; private set; }
     public float RightPlayerPoints {  get; private set; }
 
     private void Awake()
@@ -49,12 +55,41 @@ public class GameManager : MonoBehaviour
 
     public void AddLeftPlayerPoints(float amount)
     {
+        if (ended) return;
+
         LeftPlayerPoints += amount * leftPlayerPointMultiplier;
+        CheckEndCondition();
     }
 
     public void AddRightPlayerPoints(float amount)
     {
+        if (ended) return;
+
         RightPlayerPoints += amount * rightPlayerPointMultiplier;
+        CheckEndCondition();
+    }
+
+    private IEnumerator EndGameEnumerator()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void CheckEndCondition()
+    {
+        if (LeftPlayerPoints >= pointLimit)
+        {
+            winEffectLeft.gameObject.SetActive(true);
+            ended = true;
+            StartCoroutine(EndGameEnumerator());
+        }
+        else if (RightPlayerPoints >= pointLimit)
+        {
+            winEffectRight.gameObject.SetActive(true);
+            ended = true;
+            StartCoroutine(EndGameEnumerator());
+        }
+
     }
 
     public void SpawnNewObject()
