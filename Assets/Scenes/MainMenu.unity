@@ -772,6 +772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230214768}
   - component: {fileID: 1230214767}
+  - component: {fileID: 1230214769}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -812,6 +813,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230214769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230214766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e40f1d89b0e70429bd1c82f03b8bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+    clip: {fileID: 8300000, guid: a02d45e8040b5d1498623031e85e15bb, type: 3}
+    mixerGroup: {fileID: 1468588115202338304, guid: 0648aff6a08d3f0468df28399773aba6, type: 2}
+    loop: 1
+    playOnAwake: 0
+    frequentSound: 0
+    mute: 0
+    bypassEffects: 0
+    bypassListenerEffects: 0
+    bypassReverbZones: 0
+    priority: 128
+    volume: 1
+    pitch: 1
+    panStereo: 0
+    spatialBlend: 0
+    reverbZoneMix: 1
+    dopplerLevel: 1
+    spread: 0
+    minDistance: 1
+    maxDistance: 500
+    ignoreListenerVolume: 0
+    ignoreListenerPause: 0
+    rolloffMode: 0
 --- !u!1 &1498851884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,12 +1112,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 327329992}
     - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1230214769}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SoundList, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467767090828819507, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7100992277524623535, guid: 58c5fe912aeeee4418418e2ed8593c10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
