@@ -3,27 +3,44 @@ using UnityEngine;
 
 public class PhoneScroll : MonoBehaviour
 {
-	[SerializeField] Material PhoneScreenMaterial;
+	[SerializeField] MeshRenderer PhoneRenderer;
+	Material phoneScreenMaterial;
 	public float currentScrollAmount;
 	public float currentScrollVelocity;
+	public bool IsPhoneOn = true;
+	bool wasPhoneOn = true;
 	[SerializeField] float scrollForce = 1f;
 	[SerializeField] float scrollDecay = 1f;
-	Vector2 tilingVector;
+	[SerializeField] float scrollRandomnessScale = 0.2f;
+	Vector4 tilingVector;
+
+	void Start()
+	{
+		phoneScreenMaterial = PhoneRenderer.material;
+	}
 
 	[ContextMenu("Scroll memes")] public void ScrollMemes()
 	{
-		currentScrollVelocity = scrollForce;
+		currentScrollVelocity = scrollForce * Random.Range(1f-scrollRandomnessScale, 1f+scrollRandomnessScale);
 	}
 
 	void Update()
 	{
-		tilingVector = new Vector2(0f, currentScrollAmount);
+		if(IsPhoneOn != wasPhoneOn)
+		{
+			PhoneRenderer.gameObject.SetActive(IsPhoneOn);
+			wasPhoneOn = IsPhoneOn;
+		}
+
+		tilingVector = new Vector4(1f, 0.2f, 0f, currentScrollAmount);
 
 		if(currentScrollVelocity>0f)
 		{
 			currentScrollVelocity -= scrollDecay*Time.deltaTime;
 			currentScrollAmount -= currentScrollVelocity;
 		}
+
+		phoneScreenMaterial.SetVector("_BaseMap_ST", tilingVector);
 	}
 	
 }
