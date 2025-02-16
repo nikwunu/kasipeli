@@ -40,7 +40,8 @@ public class PhoneScroll : MonoBehaviour
 			currentScrollAmount -= currentScrollVelocity;
 		}
 
-		phoneScreenMaterial.SetVector("_BaseMap_ST", tilingVector);
+		phoneScreenMaterial.SetVector("_EmissionMap_ST", tilingVector);
+		phoneScreenMaterial.SetVector("_MainTex_ST", tilingVector);
 	}
 	
 }
