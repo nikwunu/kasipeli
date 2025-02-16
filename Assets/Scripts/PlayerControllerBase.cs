@@ -81,7 +81,7 @@ public class PlayerControllerBase : MonoBehaviour
         if (collision.TryGetComponent(out ThrowableObject obj))
         {
             if (obj.IsThrown && obj.Velocity.magnitude > GameManager.instance.stunVelocityTreshold
-                && obj.ThrowerPlayer != this)
+                && obj.ThrowerPlayer != this && CurrentState is not StunnedPlayerState)
             {
                 SetState<StunnedPlayerState>();
             }
