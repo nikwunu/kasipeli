@@ -59,6 +59,7 @@ MonoBehaviour:
   movementSpeed: 10
   moveSensitivity: 5
   playerIndicator: {fileID: 5765109374505719961}
+  penTransform: {fileID: 0}
 --- !u!114 &4741153850735039976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb8b842f9b46bd4187f2f9d8c1ad570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  penTransform: {fileID: 0}
+  penObjectTransform: {fileID: 0}
+  penLocalTargetPos: {x: 0.7, y: 1.4}
+  penLocalTargetRot: {x: 0, y: 0, z: -30}
 --- !u!58 &4410543205056060867
 CircleCollider2D:
   m_ObjectHideFlags: 0
