@@ -5102,6 +5102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lomakePohja: {fileID: 504957404826237498}
   drawStroke: {fileID: 3374734862137417041}
+  PenPosition: {x: 0, y: 0, z: 0}
   PenActive: 0
 --- !u!1 &7144606140585398946
 GameObject:
@@ -5119,7 +5120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3374734862137417041
 Transform:
   m_ObjectHideFlags: 0
