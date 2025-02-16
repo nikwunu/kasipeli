@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playAreaBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 6, y: 4, z: 0}
+    m_Extent: {x: 6, y: 5, z: 0}
   drawAreaBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 3, y: 4, z: 0}
+    m_Extent: {x: 3, y: 4.5, z: 0}
   phoneAreaBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 1, y: 1, z: 0}
@@ -57,3 +57,5 @@ MonoBehaviour:
   pointLimit: 20
   leftPlayerPointMultiplier: 1.25
   rightPlayerPointMultiplier: 1
+  throwablePrefabs:
+  - {fileID: 1943230089493931011, guid: 655e752bfe78ffb4c93fb618fa941dc7, type: 3}
